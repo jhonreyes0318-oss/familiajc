@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinámicas Diarias por WhatsApp</title>
+<meta name="facebook-domain-verification" content="kk5trpltu9r8yviv8wolbr75l93bbq" />
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1840842306889281');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1840842306889281&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-0:#0A0C10;
+    --bg-1:#12151C;
+    --card:#14171F;
+    --card-border:#262A35;
+    --gold:#C9A24B;
+    --gold-soft:rgba(201,162,75,.14);
+    --emerald:#3FBF8F;
+    --emerald-dim:#2E9A72;
+    --text-hi:#F4F3EF;
+    --text-mid:#A7ABB8;
+    --text-low:#6E7280;
+    --warn:#D7A54B;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    background:
+      radial-gradient(90% 60% at 50% 0%, #171B24 0%, var(--bg-0) 60%),
+      var(--bg-0);
+    color:var(--text-hi);
+    font-family:'Manrope', sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+  }
+
+  .page{
+    width:100%;
+    max-width:560px;
+    padding:64px 28px 56px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  /* eyebrow */
+  .eyebrow{
+    font-size:11px;
+    letter-spacing:4px;
+    font-weight:700;
+    color:var(--gold);
+    text-transform:uppercase;
+    padding-bottom:14px;
+    border-bottom:1px solid var(--card-border);
+    margin-bottom:26px;
+  }
+
+  /* headline */
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(38px, 9.5vw, 50px);
+    line-height:1.08;
+    text-align:center;
+    letter-spacing:-.5px;
+    color:var(--text-hi);
+  }
+  h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--gold);
+  }
+
+  .subhead{
+    margin-top:14px;
+    font-size:14.5px;
+    color:var(--text-mid);
+    text-align:center;
+    max-width:340px;
+    line-height:1.5;
+  }
+
+  /* trust strip */
+  .trust-strip{
+    display:flex;
+    gap:26px;
+    margin-top:26px;
+    align-items:center;
+  }
+  .trust-item{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:12px;
+    font-weight:600;
+    color:var(--text-mid);
+  }
+  .trust-dot{
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--emerald);
+    flex-shrink:0;
+  }
+  .trust-sep{
+    width:1px; height:14px;
+    background:var(--card-border);
+  }
+
+  /* rules card */
+  .card{
+    width:100%;
+    margin-top:36px;
+    background: var(--card);
+    border:1px solid var(--card-border);
+    border-radius:14px;
+    padding:28px 24px;
+  }
+  .card-title{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.5px;
+    color:var(--warn);
+    text-transform:uppercase;
+    margin-bottom:22px;
+    text-align:center;
+  }
+  .rule{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.045);
+    font-size:15px;
+    color:var(--text-mid);
+  }
+  .rule:last-child{ border-bottom:none; padding-bottom:0;}
+  .rule:first-child{ padding-top:0;}
+  .rule-mark{
+    font-family:'Fraunces', serif;
+    font-size:14px;
+    font-weight:600;
+    color:var(--gold);
+    flex-shrink:0;
+    width:16px;
+  }
+  .rule b{ color:var(--text-hi); font-weight:800;}
+
+  /* stats — inline, no boxes */
+  .stats{
+    width:100%;
+    display:flex;
+    align-items:stretch;
+    justify-content:center;
+    margin-top:34px;
+    gap:0;
+  }
+  .stat{
+    flex:1;
+    text-align:center;
+    padding:0 18px;
+  }
+  .stat-divider{
+    width:1px;
+    background: linear-gradient(180deg, transparent, var(--card-border) 20%, var(--card-border) 80%, transparent);
+  }
+  .stat-num{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:30px;
+    color:var(--text-hi);
+    letter-spacing:-.5px;
+  }
+  .stat-num span{
+    color:var(--gold);
+  }
+  .stat-label{
+    font-size:10.5px;
+    color:var(--text-low);
+    letter-spacing:.8px;
+    margin-top:6px;
+    font-weight:600;
+    text-transform:uppercase;
+  }
+
+  /* cta */
+  .cta-question{
+    margin-top:38px;
+    font-family:'Fraunces', serif;
+    font-size:18px;
+    font-weight:500;
+    color:var(--text-hi);
+    text-align:center;
+  }
+
+  .cta-btn{
+    margin-top:20px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:18px 20px;
+    border-radius:10px;
+    border:none;
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dim) 100%);
+    color:#06180F;
+    font-family:'Manrope', sans-serif;
+    font-weight:800;
+    font-size:15.5px;
+    letter-spacing:.3px;
+    text-decoration:none;
+    cursor:pointer;
+    box-shadow: 0 8px 24px -8px rgba(63,191,143,.5);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .cta-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px -6px rgba(63,191,143,.6);
+  }
+  .cta-btn:active{ transform: translateY(0px); }
+  .cta-btn svg{ width:19px; height:19px; flex-shrink:0; }
+
+  .cta-note{
+    margin-top:12px;
+    font-size:11.5px;
+    color:var(--text-low);
+    letter-spacing:.4px;
+    text-align:center;
+  }
+
+  .legal-note{
+    margin-top:40px;
+    font-size:10.5px;
+    color:var(--text-low);
+    text-align:center;
+    line-height:1.6;
+    max-width:420px;
+  }
+
+  @media (max-width:380px){
+    .page{ padding:48px 20px 44px; }
+    .stats{ gap:0; }
+    .stat{ padding:0 10px; }
+    .stat-num{ font-size:25px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="eyebrow">Familia JC</div>
+
+  <h1>Gana <em>todos los días</em><br>por WhatsApp</h1>
+  <div class="subhead">Reglas claras y pagos comprobados desde hace más de 4 años.</div>
+
+  <div class="trust-strip">
+    <div class="trust-item"><span class="trust-dot"></span>+4 años activos</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><span class="trust-dot"></span>Pagos comprobados</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Lee antes de entrar</div>
+
+    <div class="rule">
+      <div class="rule-mark">01</div>
+      <div>Sorteos en vivo <b>todos los días</b></div>
+    </div>
+    <div class="rule">
+      <div class="rule-mark">02</div>
+      <div>Solo necesitas <b>2 cifras</b> para ganar</div>
+    </div>
+    <div class="rule">
+      <div class="rule-mark">03</div>
+      <div><b>3 oportunidades</b> de ganar todos los días</div>
+    </div>
+    <div class="rule">
+      <div class="rule-mark">04</div>
+      <div>Pagos <b>inmediatos</b> y comprobados</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num"><span>+4</span></div>
+      <div class="stat-label">Años de trayectoria</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-num"><span>+1000</span></div>
+      <div class="stat-label">Premios entregados</div>
+    </div>
+  </div>
+
+  <div class="cta-question">¿Estás listo para ganar hoy?</div>
+
+  <a href="https://chat.whatsapp.com/FIMXEHdG18q7hAbxgEGi78?s=cl&p=a&ilr=1" target="_blank" rel="noopener" class="cta-btn" onclick="if(typeof fbq!=='undefined'){fbq('track','Lead');}">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.16c-.24.68-1.4 1.3-1.93 1.35-.5.05-1.03.25-3.42-.71-2.9-1.16-4.76-4.05-4.9-4.24-.14-.19-1.17-1.56-1.17-2.98 0-1.42.75-2.11 1.02-2.4.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2 .9 2.14.07.14.11.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.29.28-.12.55.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.28.36-.23.6-.14.24.09 1.55.73 1.82.87.27.14.45.21.51.32.06.11.06.66-.18 1.34z"/></svg>
+    Entrar al grupo ahora
+  </a>
+  <div class="cta-note">Gratis · Sin costo · Solo WhatsApp</div>
+
+  <div class="legal-note">
+    Esta es una comunidad independiente. La participación es voluntaria y bajo tu propia responsabilidad.
+  </div>
+
+</div>
+</body>
+</html>
